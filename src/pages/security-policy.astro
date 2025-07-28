@@ -10,13 +10,11 @@ const markdownContent = readFileSync(markdownPath, "utf-8");
 
 // Simple markdown to HTML converter for headings and basic formatting
 function parseMarkdown(content: string) {
-  console.log("Parsing markdown content...");
-  console.log(content);
   return content
     .replace(/^# (.*$)/gm, "<h1>$1</h1>")
     .replace(/^## (.*$)/gm, "<h2>$1</h2>")
     .replace(/^### (.*$)/gm, "<h3>$1</h3>")
-    .replace(/^\*\*(.*?)\*\*/gm, "<strong>$1</strong>")
+    .replace(/\*\*(.*?)\*\*/gm, "<strong>$1</strong>")
     .replace(/^\- (.*$)/gm, "<li>$1</li>")
     .replace(/(<li>.*<\/li>)/gs, "<ul>$1</ul>")
     .replace(/<\/ul>\s*<ul>/g, "")
@@ -33,17 +31,17 @@ function parseMarkdown(content: string) {
 const htmlContent = parseMarkdown(markdownContent);
 ---
 
-<Layout title="Security Policy">
+<Layout title="Politique de sécurité">
   <div class="security-policy-container">
     <nav class="breadcrumb">
       <a href="/">Home</a>
       <span class="separator">→</span>
-      <span class="current">Security Policy</span>
+      <span class="current">Politique de sécurité</span>
     </nav>
 
     <div class="policy-header">
       <div class="header-content">
-        <h1>Security Policy</h1>
+        <h1>Politique de sécurité</h1>
         <p class="subtitle">
           Notre engagement à protéger vos données et à garantir la sécurité de
           nos systèmes, conformément aux principes exposés dans cette politique.
@@ -77,9 +75,9 @@ const htmlContent = parseMarkdown(markdownContent);
 
         <div class="document-footer">
           <div class="footer-info">
-            <p><strong>Document Classification:</strong> Public</p>
-            <p><strong>Last Updated:</strong> January 2025</p>
-            <p><strong>Next Review:</strong> January 2026</p>
+            <p><strong>Classification:</strong> Public</p>
+            <p><strong>Dernière mise à jour:</strong> Janvier 2025</p>
+            <p><strong>Prochaine mise à jour:</strong> Janvier 2026</p>
           </div>
           <button onclick="window.print()" class="print-button">
             <svg
@@ -96,7 +94,7 @@ const htmlContent = parseMarkdown(markdownContent);
               ></path>
               <rect x="6" y="14" width="12" height="8"></rect>
             </svg>
-            Print Policy
+            Imprimer le document
           </button>
         </div>
       </main>
