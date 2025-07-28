@@ -1,14 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getCollection } from "astro:content";
 import { readFileSync } from "fs";
 import path from "path";
 
-// Read the markdown file directly
 const markdownPath = path.join(process.cwd(), "src/content/security-policy.md");
 const markdownContent = readFileSync(markdownPath, "utf-8");
 
-// Simple markdown to HTML converter for headings and basic formatting
 function parseMarkdown(content: string) {
   return content
     .replace(/^# (.*$)/gm, "<h1>$1</h1>")
@@ -51,7 +48,7 @@ const htmlContent = parseMarkdown(markdownContent);
 
     <div class="policy-content">
       <aside class="table-of-contents">
-        <h3>Table of Contents</h3>
+        <h3>Table des matières</h3>
         <nav class="toc-nav">
           <a href="#introduction">1. Introduction</a>
           <a href="#objectives">2. Données collectées</a>
@@ -76,8 +73,7 @@ const htmlContent = parseMarkdown(markdownContent);
         <div class="document-footer">
           <div class="footer-info">
             <p><strong>Classification:</strong> Public</p>
-            <p><strong>Dernière mise à jour:</strong> Janvier 2025</p>
-            <p><strong>Prochaine mise à jour:</strong> Janvier 2026</p>
+            <p><strong>Dernière mise à jour:</strong> Juillet 2025</p>
           </div>
           <button onclick="window.print()" class="print-button">
             <svg
