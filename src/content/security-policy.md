@@ -5,7 +5,7 @@
 
 ## 1. Introduction
 
-Cette politique de confidentialité décrit comment AFRIKPAY, opérée par ses entités légales respectives, collecte, utilise, stocke, partage et protège vos données à caractère personnel lorsque vous utilisez ses services de transfert d’argent et de paiement de factures via le site [www.afrikpay.com](http://www.afrikpay.com) ou ses applications mobiles.
+Cette politique de confidentialité décrit comment AFRIKPAY, opérée par ses entités légales respectives, collecte, utilise, stocke, partage et protège vos données à caractère personnel lorsque vous utilisez ses services de transfert d’argent et de paiement de factures via le site [www.afrikpay.com](https://www.afrikpay.com) ou ses applications mobiles.
 
 AFRIKPAY s'engage à protéger la vie privée de ses utilisateurs, conformément aux lois applicables dans chaque juridiction.
 

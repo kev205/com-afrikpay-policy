@@ -15,6 +15,14 @@ function parseMarkdown(content: string) {
     .replace(/^\- (.*$)/gm, "<li>$1</li>")
     .replace(/(<li>.*<\/li>)/gs, "<ul>$1</ul>")
     .replace(/<\/ul>\s*<ul>/g, "")
+    .replace(
+      /(https?:\/\/[^\s<]+)(?![^<]*>|[^<>]*<\/a>)/g,
+      '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+    )
+    .replace(
+      /mailto:([^\s<]+)(?![^<]*>|[^<>]*<\/a>)/g,
+      '<a href="mailto:$1">$1</a>'
+    )
     .replace(/\n\n/g, "</p><p>")
     .replace(/^(?!<[h|u|l])/gm, "<p>")
     .replace(/(?<![>])$/gm, "</p>")
